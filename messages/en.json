@@ -1,0 +1,235 @@
+{
+  "heroFuturistic": {
+    "title": "Premium Auto Platform",
+    "subtitle": "Rent, buy or sell cars with a modern digital experience",
+    "button1": "Browse Cars",
+    "button2": "List Your Car",
+    "scroll": "Scroll to explore",
+    "statCars": "Cars",
+    "statBrands": "Brands",
+    "statClients": "Clients"
+  },
+  "nav": {
+    "home": "Home",
+    "cars": "Cars",
+    "rent": "Rent",
+    "buySell": "Buy / Sell",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "hero": {
+    "badge": "Premium Auto Service",
+    "title": "Find Your",
+    "titleHighlight": "Perfect",
+    "titleEnd": "Car",
+    "subtitle": "Georgia's leading platform for buying, selling, and renting premium cars",
+    "browseCars": "Browse Cars",
+    "rentNow": "Rent Now",
+    "stats": {
+      "cars": "Cars",
+      "brands": "Brands",
+      "clients": "Happy Clients",
+      "years": "Years Experience"
+    }
+  },
+  "featured": {
+    "title": "Featured Cars",
+    "subtitle": "Our best offers"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Everything in one place",
+    "rent": {
+      "title": "Rent",
+      "desc": "Premium cars with daily rates and flexible conditions"
+    },
+    "buy": {
+      "title": "Buy",
+      "desc": "Quality-guaranteed cars with full documentation"
+    },
+    "sell": {
+      "title": "Sell",
+      "desc": "Sell your car fast and profitably"
+    }
+  },
+  "cta": {
+    "title": "Ready to Start?",
+    "subtitle": "Register and enjoy our premium services",
+    "button": "Get Started"
+  },
+  "cars": {
+    "title": "Cars",
+    "subtitle": "Find your perfect car",
+    "filters": {
+      "title": "Filters",
+      "brand": "Brand",
+      "allBrands": "All Brands",
+      "type": "Type",
+      "allTypes": "All",
+      "rent": "Rent",
+      "sale": "Sale",
+      "year": "Year",
+      "from": "From",
+      "to": "To",
+      "price": "Price ($)",
+      "fuel": "Fuel",
+      "allFuels": "All",
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "electric": "Electric",
+      "hybrid": "Hybrid",
+      "transmission": "Transmission",
+      "allTransmissions": "All",
+      "automatic": "Automatic",
+      "manual": "Manual",
+      "reset": "Reset",
+      "apply": "Apply"
+    },
+    "perDay": "/day",
+    "mileage": "Mileage",
+    "year": "Year",
+    "viewDetails": "View Details",
+    "noResults": "No cars found",
+    "noResultsDesc": "Try changing your filter settings"
+  },
+  "carDetail": {
+    "specs": "Specifications",
+    "brand": "Brand",
+    "model": "Model",
+    "year": "Year",
+    "mileage": "Mileage",
+    "fuel": "Fuel",
+    "transmission": "Transmission",
+    "location": "Location",
+    "provider": "Provider",
+    "buyPrice": "Purchase Price",
+    "rentPrice": "Daily Rental",
+    "requestRent": "Request Rental",
+    "requestBuy": "Request Purchase",
+    "description": "Description",
+    "contact": "Contact",
+    "available": "Available",
+    "rented": "Rented",
+    "sold": "Sold"
+  },
+  "auth": {
+    "loginTitle": "Welcome Back",
+    "loginSubtitle": "Sign in to your account",
+    "registerTitle": "Create Account",
+    "registerSubtitle": "Register for premium services",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "name": "Name",
+    "role": "Role",
+    "customer": "Customer",
+    "provider": "Seller / Provider",
+    "login": "Login",
+    "register": "Register",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "forgotPassword": "Forgot password?"
+  },
+  "dashboard": {
+    "title": "My Dashboard",
+    "myCars": "My Cars",
+    "addCar": "Add Car",
+    "profile": "Profile",
+    "settings": "Settings",
+    "totalCars": "Total Cars",
+    "available": "Available",
+    "rented": "Rented",
+    "sold": "Sold",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete?",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "addCar": {
+    "title": "Add Car",
+    "subtitle": "Fill in all required fields",
+    "brand": "Brand",
+    "model": "Model",
+    "year": "Year",
+    "price": "Sale Price ($)",
+    "rentalPrice": "Daily Rate ($)",
+    "mileage": "Mileage (km)",
+    "fuelType": "Fuel Type",
+    "transmission": "Transmission",
+    "location": "Location",
+    "type": "Listing Type",
+    "description": "Description",
+    "images": "Image URLs (one per line)",
+    "submit": "Add Car",
+    "success": "Car added successfully!"
+  },
+  "rent": {
+    "title": "Rent a Car",
+    "subtitle": "Premium cars with flexible conditions",
+    "why": {
+      "title": "Why Us?",
+      "free": "Free Delivery",
+      "freeDesc": "We deliver the car to your desired location",
+      "support": "24/7 Support",
+      "supportDesc": "Contact us any time, any day",
+      "insurance": "Full Insurance",
+      "insuranceDesc": "All our cars are fully insured"
+    }
+  },
+  "buySell": {
+    "title": "Buy & Sell",
+    "subtitle": "Guaranteed quality, transparent conditions",
+    "buyTitle": "Buy a Car",
+    "buyDesc": "Browse thousands of options from our catalog. All cars are verified.",
+    "sellTitle": "Sell a Car",
+    "sellDesc": "Register as a seller and list your car on our platform."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "AutoPremium — Georgia's Premium Auto Platform",
+    "story": "Our Story",
+    "storyText": "AutoPremium was founded in 2020 with the goal of creating Georgia's most trusted platform for buying, selling, and renting premium cars. Today we have 500+ happy clients and 50+ cars.",
+    "mission": "Our Mission",
+    "missionText": "To provide our clients with the best cars, premium service, and transparent conditions.",
+    "team": "Our Team"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in touch anytime",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "phone": "Phone",
+    "address": "Address",
+    "addressValue": "Tbilisi, Georgia",
+    "phoneValue": "+995 555 000 000",
+    "emailValue": "info@autopremium.ge",
+    "success": "Message sent!"
+  },
+  "footer": {
+    "desc": "Georgia's premium auto platform. Buy, sell, rent.",
+    "links": "Quick Links",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back",
+    "seeAll": "See All",
+    "km": "km",
+    "day": "day",
+    "petrol": "Petrol",
+    "diesel": "Diesel",
+    "electric": "Electric",
+    "hybrid": "Hybrid",
+    "automatic": "Automatic",
+    "manual": "Manual"
+  }
+}
