@@ -21,7 +21,7 @@ export default async function CarDetailPage({ params }: Props) {
   return <CarDetailClient car={car} locale={locale} />;
 }
 
-function CarDetailClient({ car, locale }: { car: (typeof mockCars)[0]; locale: string }) {
+function CarDetailClient({ car, locale }: { car: import('@/types').Car; locale: string }) {
   const t = useTranslations('carDetail');
   const common = useTranslations('common');
 
@@ -58,7 +58,7 @@ function CarDetailClient({ car, locale }: { car: (typeof mockCars)[0]; locale: s
           <div className="space-y-3">
             <div className="relative rounded-2xl overflow-hidden h-80 lg:h-96">
               <Image
-                src={car.images[0]}
+                src={car.images?.[0] ?? '/images/cars/fallback.jpg'}
                 alt={`${car.brand} ${car.model}`}
                 fill
                 className="object-cover"
@@ -76,11 +76,11 @@ function CarDetailClient({ car, locale }: { car: (typeof mockCars)[0]; locale: s
                 </span>
               </div>
             </div>
-            {car.images.length > 1 && (
+            {car.images?.length > 1 && (
               <div className="grid grid-cols-3 gap-3">
                 {car.images.slice(1).map((img, i) => (
                   <div key={i} className="relative rounded-xl overflow-hidden h-24">
-                    <Image src={img} alt="" fill className="object-cover" />
+                    <Image src={img ?? '/images/cars/fallback.jpg'} alt="" fill className="object-cover" />
                   </div>
                 ))}
               </div>

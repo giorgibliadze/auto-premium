@@ -6,9 +6,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'upload.wikimedia.org' },
-      { protocol: 'https', hostname: 'i.postimg.cc' },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
   // Allow three/webgpu ESM imports to be bundled without transpile errors

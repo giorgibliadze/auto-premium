@@ -43,15 +43,14 @@ export default function CarCard({ car, index = 0 }: Props) {
       className="group relative rounded-2xl overflow-hidden glass border border-white/8 hover:border-yellow-500/20 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-500/5"
     >
       {/* Image */}
-      <div className="relative h-52 overflow-hidden">
+      <div className="relative h-[220px] overflow-hidden rounded-t-2xl bg-slate-950">
         <Image
-          src={car.images[0]}
+          src={car.images?.[0] ?? 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80'}
           alt={`${car.brand} ${car.model}`}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
         {/* Badges */}
         <div className="absolute top-3 left-3 flex gap-2">
