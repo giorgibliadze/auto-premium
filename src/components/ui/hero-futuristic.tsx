@@ -185,7 +185,7 @@ export default function HeroFuturistic() {
           </motion.div>
 
           <h1
-            className="font-black uppercase mb-0"
+            className="font-black uppercase mb-0 text-white"
             style={{
               fontSize: 'clamp(3.5rem, 7vw, 6rem)',
               lineHeight: 0.9,
@@ -193,8 +193,22 @@ export default function HeroFuturistic() {
               textShadow: '0 2px 40px rgba(0,0,0,0.55)',
             }}
           >
-            <span className="block whitespace-nowrap">{t('title').split(' ').slice(0, -1).join(' ')}</span>
-            <span className="block">{t('title').split(' ').slice(-1)}</span>
+            {(() => {
+              const titleWords = t('title').split(' ');
+              const firstWord = titleWords[0] ?? '';
+              const secondWord = titleWords[1] ?? '';
+              const rest = titleWords.slice(2).join(' ');
+
+              return (
+                <>
+                  <span className="block whitespace-nowrap">
+                    <span>{firstWord} </span>
+                    <span className="text-[#D6A62E]">{secondWord}</span>
+                  </span>
+                  <span className="block">{rest}</span>
+                </>
+              );
+            })()}
           </h1>
 
           <motion.div
@@ -239,31 +253,23 @@ export default function HeroFuturistic() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.3, duration: 0.7 }}
-            className="flex items-stretch gap-0"
+            className="mt-10 flex flex-wrap items-center gap-8 lg:gap-10"
           >
             {[
-              { value: '50+', label: t('statCars'), delay: 1.35 },
-              { value: '20+', label: t('statBrands'), delay: 1.45 },
-              { value: '500+', label: t('statClients'), delay: 1.55 },
-            ].map(({ value, label, delay }, i) => (
-              <div key={label} className="flex flex-col gap-1">
-                {i > 0 && <div className="w-[1px] bg-white/[0.08] mx-6 self-stretch" />}
-                <motion.span
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay, duration: 0.45 }}
-                  className="text-[1.4rem] sm:text-[1.6rem] font-bold gold-gradient leading-none tracking-tight"
-                >
-                  {value}
-                </motion.span>
-                <motion.span
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay, duration: 0.45 }}
-                  className="text-[9px] sm:text-[10px] text-white/25 uppercase tracking-[0.2em]"
-                >
-                  {label}
-                </motion.span>
+              ['50+', t('statCars')],
+              ['20+', t('statBrands')],
+              ['500+', t('statClients')],
+            ].map(([value, label], index) => (
+              <div key={label} className="flex items-center gap-8">
+                {index > 0 && <div className="h-8 w-px bg-white/10" />}
+                <div>
+                  <div className="text-[1.4rem] sm:text-[1.6rem] font-black text-[#D6A62E]">
+                    {value}
+                  </div>
+                  <div className="mt-1 text-[10px] tracking-[0.25em] text-white/45 uppercase">
+                    {label}
+                  </div>
+                </div>
               </div>
             ))}
           </motion.div>
