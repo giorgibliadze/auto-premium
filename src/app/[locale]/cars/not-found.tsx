@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
 type Props = {
-  params: { locale: string };
+  params?: { locale?: string };
 };
 
 export default function NotFound({ params }: Props) {
-  const { locale } = params;
+  const locale = params?.locale ?? 'ka';
 
   return (
     <div className="min-h-screen bg-black pt-24 pb-16">
