@@ -1,5 +1,4 @@
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import SectionTitle from '@/components/SectionTitle';
 import { Target, Heart, Award } from 'lucide-react';
 
@@ -35,7 +34,7 @@ export default function AboutPage() {
         {/* Team */}
         <SectionTitle title={t('team')} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {team.map((member, i) => (
+          {team.map((member) => (
             <div key={member.name} className="glass rounded-2xl p-6 border border-white/5 text-center hover:border-yellow-500/10 transition-colors">
               <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-600 to-yellow-400 flex items-center justify-center mx-auto mb-4 text-black font-bold text-xl">
                 {member.initial}

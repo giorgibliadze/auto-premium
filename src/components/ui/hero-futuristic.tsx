@@ -93,42 +93,6 @@ function ScanLine() {
   );
 }
 
-// ── Headline reveal: line 1 = first N-1 words (nowrap), line 2 = last word (indented) ──
-function AnimatedTitle({ text }: { text: string }) {
-  const words = text.split(' ');
-  const line1 = words.slice(0, -1);   // e.g. ["PREMIUM", "AUTO"]
-  const line2 = words[words.length - 1]; // e.g. "PLATFORM"
-
-  return (
-    <span className="flex flex-col items-center text-center">
-      {/* Line 1 — all words glued together, no wrap allowed */}
-      <span className="inline-flex justify-center whitespace-nowrap">
-        {line1.map((word, i) => (
-          <motion.span
-            key={`line1-${i}`}
-            initial={{ opacity: 0, y: 40, skewX: -8 }}
-            animate={{ opacity: 1, y: 0, skewX: 0 }}
-            transition={{ duration: 0.65, delay: 0.3 + i * 0.13, ease: [0.16, 1, 0.3, 1] }}
-            className={`inline-block ${i < line1.length - 1 ? 'mr-[0.22em]' : ''} ${i === 1 ? 'gold-gradient' : 'text-white'}`}
-          >
-            {word}
-          </motion.span>
-        ))}
-      </span>
-
-      {/* Line 2 — last word, indented to create a stepped premium look */}
-      <motion.span
-        initial={{ opacity: 0, y: 40, skewX: -8 }}
-        animate={{ opacity: 1, y: 0, skewX: 0 }}
-        transition={{ duration: 0.65, delay: 0.3 + line1.length * 0.13, ease: [0.16, 1, 0.3, 1] }}
-        className="inline-flex justify-center text-white whitespace-nowrap pl-[0.55em] sm:pl-[0.6em]"
-      >
-        {line2}
-      </motion.span>
-    </span>
-  );
-}
-
 // ── Scroll cue ────────────────────────────────────────────────────────────────
 function ScrollCue({ label }: { label: string }) {
   return (

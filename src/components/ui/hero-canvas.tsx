@@ -20,6 +20,7 @@ import {
   mix,
 } from 'three/tsl';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 extend(THREE as any);
 
 // ── Post-processing ───────────────────────────────────────────────────────────
@@ -27,6 +28,7 @@ function PostProcessing() {
   const { gl, scene, camera } = useThree();
 
   const render = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const pp = new THREE.PostProcessing(gl as any);
     const scenePass = pass(scene, camera);
     const sceneColor = scenePass.getTextureNode('output');
@@ -44,9 +46,9 @@ function PostProcessing() {
 function Scene() {
   const meshRef = useRef<Mesh>(null);
 
-  const { material, uniforms } = useMemo(() => {
-    const uProgress = uniform(0);
+  const uProgress = useMemo(() => uniform(0), []);
 
+  const material = useMemo(() => {
     // Aspect-corrected UV so dots are circular at any viewport size
     const tUv = vec2(uv().x.mul(float(16).div(9)), uv().y);
 
@@ -65,20 +67,19 @@ function Scene() {
     const scanColor  = vec3(1.15, 0.18, 0.02);    // neon red-orange on the scan band
     const dotColor   = mix(baseColor, scanColor, scanBand);
 
-    const mat = new THREE.MeshBasicNodeMaterial({
+    return new THREE.MeshBasicNodeMaterial({
       colorNode: dot.mul(dotColor),
       transparent: true,
       opacity: 0.92,
     });
-
-    return { material: mat, uniforms: { uProgress } };
-  }, []);
+  }, [uProgress]);
 
   const { viewport } = useThree();
 
   useFrame(({ clock }) => {
     // Scan band oscillates smoothly
-    uniforms.uProgress.value = Math.sin(clock.getElapsedTime() * 0.42) * 0.5 + 0.5;
+    // eslint-disable-next-line react-hooks/immutability
+    uProgress.value = Math.sin(clock.getElapsedTime() * 0.42) * 0.5 + 0.5;
   });
 
   return (
@@ -99,6 +100,7 @@ export function HeroCanvas() {
       flat
       style={{ width: '100%', height: '100%', background: '#050505' }}
       gl={async (props) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const renderer = new THREE.WebGPURenderer(props as any);
         await renderer.init();
         return renderer;

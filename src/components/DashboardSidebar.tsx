@@ -3,11 +3,10 @@
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import { Car, PlusCircle, User, Settings, LayoutDashboard } from 'lucide-react';
+import { PlusCircle, User, Settings, LayoutDashboard } from 'lucide-react';
 
 export default function DashboardSidebar() {
   const t = useTranslations('dashboard');
-  const nav = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
 
